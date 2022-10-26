@@ -25,5 +25,3 @@ jobs:
           key: ${{ runner.os }}-cache-${{ hashFiles('**/packages*.txt') }}
           restore-keys: |
             ${{ runner.os }}-cache-
-      - run: package-installer packages.txt
-        if: steps.cache-packages.outputs.cache-hit != 'true'
